@@ -18,7 +18,7 @@
 
 # 📖 About This Project <a name="about-project"></a>
 
-> Navigation-Nation is a website crafted using HTML, CSS, and JavaScript, with the added benefit of linters to address any errors in the code, and it's built with Webpack as its primary focus. This project leverages advanced CSS and JavaScript coding techniques. Feel free to explore the demo link.
+> Real Estate Website is a website created with the MERN stack. With additional npm packages, you can create an account, delete an account, post a house for sale or rent, add favorites, remove favorites, and search for houses. Download the project for a demo test.
 
 # Sample Of Website <a name="Sample-Of-Website"></a>
 
@@ -33,13 +33,14 @@
   <summary>Client</summary>
   <ul>
   <li><a href="https://en.wikipedia.org/wiki/HTML">Html</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/CSS">Css</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Sass_(style_sheet_language)">Scss</a></li>
+  <li><a href="https://tailwindcss.com/">Tailwindcss</a></li>
   <li><a href="https://en.wikipedia.org/wiki/JavaScript">Javascript</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/TypeScript">TypeScript</a></li>
-  <li><a href="https://stylelint.io/">Html/CSS Linters</a></li>
-  <li><a href="https://eslint.org/">Html/TsLinters</a></li>
-    <li><a href="https://webpack.js.org/">Web Pack</a></li>
+  <li><a href="https://react.dev/">React</a></li>
+  <li><a href="https://nodejs.org/en">Nodejs</a></li>
+  <li><a href="https://expressjs.com/">Expressjs</a></li>
+  <li><a href="https://www.mongodb.com/">Mongodb</a></li>
+ <li><a href="https://prettier.io/">Prettier</a></li>
+  <li><a href="https://eslint.org/">Eslint</a></li>
   </ul>
 </details>
 
@@ -47,12 +48,22 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Responsive Website]**
-- **[Flex & Grid]**
-- **[CSS ]**
-- **[JavaScript ]**
-- **[Linters ]**
-- **[Tslint ]**
+- **[FRONTEND ]**
+- **[HTML ]**
+- **[TAILWIND ]**
+- **[JAVASCRIPT ]**
+- **[REACT ]**
+
+- **[BACKEND ]**
+- **[NODE.JS ]**
+- **[EXPRESS.JS ]**
+- **[MANGO.DB ]**
+
+- **[TOOLS ]**
+- **[ESLINT ]**
+- **[PRETTIER ]**
+
+- **[AND MORE ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
