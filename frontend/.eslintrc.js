@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: 'airbnb',
+  extends: ['airbnb', 'plugin:react/recommended'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -11,29 +11,6 @@ module.exports = {
   rules: {
     'linebreak-style': 'off',
     semi: 'off',
+    'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
   },
-  overrides: [
-    {
-      files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'], // Adjust the patterns to match your project files
-      rules: {
-        'linebreak-style': 'off',
-        semi: 'off',
-      },
-    },
-    {
-      files: [
-        '.eslintrc.js',
-        '.eslintrc.cjs',
-        '.eslintrc.xjs',
-        '.eslintrc.ts',
-        '.eslintrc.tsx',
-      ],
-      env: {
-        node: true,
-      },
-      parserOptions: {
-        sourceType: 'script',
-      },
-    },
-  ],
 }
