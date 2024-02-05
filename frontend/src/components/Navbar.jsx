@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Navbar() {
+  const [isMenuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen)
+  }
+
   return (
     <nav className="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -18,11 +24,11 @@ function Navbar() {
           </span>
         </a>
         <button
-          data-collapse-toggle="navbar-solid-bg"
           type="button"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-solid-bg"
-          aria-expanded="false"
+          aria-expanded={isMenuOpen}
+          onClick={toggleMenu}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -41,7 +47,10 @@ function Navbar() {
             />
           </svg>
         </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+        <div
+          className={`w-full md:block md:w-auto ${isMenuOpen ? '' : 'hidden'}`}
+          id="navbar-solid-bg"
+        >
           <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
             <li>
               <a
@@ -84,5 +93,3 @@ function Navbar() {
 }
 
 export default Navbar
-
-// rafce
