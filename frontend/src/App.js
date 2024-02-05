@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import HomePage from './components/pages/HomePage'
 import About from './components/pages/About'
+import NotFound from './components/pages/NotFound'
 import './App.css'
 // eslint-disable-next-line react/function-component-definition
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
+        <Route path="*" element={<NotFound />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/About" element={<About />} />
       </Routes>
