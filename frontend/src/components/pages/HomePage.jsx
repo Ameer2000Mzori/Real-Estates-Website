@@ -5,10 +5,10 @@ const HomePage = () => {
   // eslint-disable-next-line
 
   return (
-    <div className="flex flex-row  h-[100dvh]  ">
-      <ul className=" flex flex-row text-center items-center justify-center gap-4 w-[100%] h-[100%]">
+    <div className="flex flex-row  h-[100dvh] text-center items-center justify-center ">
+      <ul className=" flex flex-row text-center items-center justify-center gap-4 w-[80%] h-[100%] flex-wrap">
         {housesObjs.map((house) => (
-          <li key={house.id}>
+          <li className="w-[350px] h-[250px]" key={house.id}>
             <p>${house.price}</p>
           </li>
         ))}
