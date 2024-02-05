@@ -13,6 +13,7 @@ module.exports = {
     semi: 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
     'import/newline-after-import': 'off',
+    'react/jsx-one-expression-per-line': 'off',
     'react/function-component-definition': 'off',
     'arrow-body-style': 'off', // Disable arrow-body-style rule
   },
