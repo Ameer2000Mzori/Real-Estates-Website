@@ -8,7 +8,7 @@ function Navbar() {
   }
 
   return (
-    <nav className="bg-[#333F48] fixed left-0 top-0 w-[100%]">
+    <nav className="bg-[#47525E] fixed left-0 top-0 w-[100%]">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="https://github.com/"

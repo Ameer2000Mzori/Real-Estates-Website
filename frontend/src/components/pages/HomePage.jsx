@@ -13,7 +13,7 @@ const HomePage = () => {
         alt=""
       />
       <div className="flex flex-row  h-[100dvh] text-center items-center justify-center bg-slate-600 bg-opacity-25">
-        <ul className="house-list flex flex-row text-center items-center justify-center gap-4 w-[60%] h-[600px] flex-wrap">
+        <ul className="house-list flex flex-row text-center items-center justify-center gap-4 w-[60%] h-[600px] flex-wrap overflow-auto">
           {housesObjs.map((house) => (
             <li
               className="w-[250px] h-[250px] bg-white flex flex-col text-center items-center justify-center"
@@ -24,9 +24,14 @@ const HomePage = () => {
                   250PX / 250PX
                 </h2>
               </div>
-              <div className="h-[20%] w-[100%] bg-slate-300 flex flex-col text-center items-center justify-evenly border-b-2 border-gray-300">
+              <div className="h-[20%] w-[100%] bg-slate-300 flex flex-row  text-center items-center justify-evenly border-b-2 border-gray-300">
                 <p>{house.price}</p>
-                <button type="button">add to bookmarks</button>
+                <button
+                  className="w-[100px] h-[30px] rounded-sm bg-slate-400 hover:bg-slate-500 active:bg-slate-200"
+                  type="button"
+                >
+                  bookmarks{' '}
+                </button>
               </div>
             </li>
           ))}
