@@ -8,7 +8,7 @@ function Navbar() {
   }
 
   return (
-    <nav className="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 fixed left-0 top-0 w-[100%]">
+    <nav className="bg-[#333F48] fixed left-0 top-0 w-[100%]">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="https://github.com/"
