@@ -1,0 +1,66 @@
+===>  useEffect Code: 
+
+
+
+ useEffect(() => {
+    const bookmarks = JSON.parse(localStorage.getItem('savedBookMarks')) || []
+    setSavedBookMarks(bookmarks)
+  }, [])
+
+
+
+//  useEffect explanation: useeffect can be used in two ways:
+
+1- the first way is to use it once when the webpage is loaded, as following the => [] should be empty
+
+2- the second way is to put some thing inside of the => [] should everytime update when you want to run useEffect again
+
+
+    ================================================================
+
+
+===>   useState code + how to create array and minuplating it.
+
+
+  const [savedBookMarks, setSavedBookMarks] = useState([])
+  const addToFavos = (house) => {
+    const newBookMarks = [...savedBookMarks, house]
+    setSavedBookMarks(newBookMarks)
+    localStorage.setItem('savedBookMarks', JSON.stringify(newBookMarks))
+  }
+
+  //  useState explanation : creating arry and minuplating it by using useState and some other logic:
+
+  first you import useState then you build it like this  ([]) <= means empty array
+  second if you want to update it you will do the following as you will create 
+  new varibale and then open two brackets and then you will put ... dots as 
+  you want all the pervouse code and data inside of the frist varibale in the useState
+  you created to be saved in the new varibale in this case is newBookMaks then we will also put
+  the new data we got in side of our code and that is house 
+  then we use the second word where we have created in the useState and that is setSavedBookMarks()
+  and inside the brackets for sure the new data we have created and that is in this case => newBookMaks
+
+    ================================================================
+
+
+===>   if else the new way in react code : 
+
+    => the function that is being called and getting data as houseId
+  const isHouseAlreadySaved = (houseId) => {
+    return savedBookMarks.some((savedBook) => savedBook.id === houseId)
+  }
+
+    => the main function where sends and gets data and use it as false or truthy
+    
+    { isHouseAlreadySaved(house.id) ? console.log('true') : console.log('false') }
+
+  //  if else the new way explanation : 
+
+  first of all inside of our html jsx tree we open two currly brackets that inside of them 
+  will be our if else and that if else is already a function call back and will get house.Id as
+  data and it will check if is true or false and will get data and use it as false or truthy
+  in this case.
+
+    ================================================================
+
+  
