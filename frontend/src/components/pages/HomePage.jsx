@@ -2,10 +2,17 @@ import React from 'react'
 import housesObjs from '../hooks/HomePage'
 import bgImage from '../assets/bg-img.png'
 
+const savedBookMarks = []
+
 const HomePage = () => {
   // eslint-disable-next-line
 
-  const addToFavos = () => {}
+  const addToFavos = (house) => {
+    console.log(house)
+    savedBookMarks.push(house)
+    localStorage.setItem('savedBookMarks', JSON.stringify(savedBookMarks))
+    console.log('our book marks after save', savedBookMarks)
+  }
 
   return (
     <>
