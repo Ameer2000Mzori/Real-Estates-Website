@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import HomePage from './components/pages/HomePage'
-import About from './components/pages/About'
 import NotFound from './components/pages/NotFound'
 import BookMarks from './components/pages/BookMarks'
 import './App.css'
@@ -14,7 +13,6 @@ function App() {
       <Routes>
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<HomePage />} />
-        <Route path="/About" element={<About />} />
         <Route path="/BookMarks" element={<BookMarks />} />
       </Routes>
     </Router>
