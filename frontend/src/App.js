@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import HomePage from './components/pages/HomePage'
 import About from './components/pages/About'
 import NotFound from './components/pages/NotFound'
+import BookMarks from './components/pages/BookMarks'
 import './App.css'
 // eslint-disable-next-line react/function-component-definition
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/About" element={<About />} />
+        <Route path="/BookMarks" element={<BookMarks />} />
       </Routes>
     </Router>
   )

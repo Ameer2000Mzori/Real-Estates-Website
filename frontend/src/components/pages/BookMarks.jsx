@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import housesObjs from '../hooks/HomePage'
 import bgImage from '../assets/bg-img.png'
 
-// eslint-disable-next-line
-
-const HomePage = () => {
+const BookMarks = () => {
   const [savedBookMarks, setSavedBookMarks] = useState([])
 
   useEffect(() => {
@@ -12,14 +9,18 @@ const HomePage = () => {
     setSavedBookMarks(bookmarks)
   }, [])
 
-  const addToFavos = (house) => {
-    const newBookMarks = [...savedBookMarks, house]
+  // delete function
+
+  const deleteHouse = (house) => {
+    console.log('the house clicked:', house)
+
+    const newBookMarks = savedBookMarks.filter((book) => {
+      return book.id !== house.id
+    })
+
     setSavedBookMarks(newBookMarks)
     localStorage.setItem('savedBookMarks', JSON.stringify(newBookMarks))
-  }
-
-  const isHouseAlreadySaved = (houseId) => {
-    return savedBookMarks.some((savedBook) => savedBook.id === houseId)
+    console.log('this is after delete', newBookMarks)
   }
 
   return (
@@ -31,7 +32,7 @@ const HomePage = () => {
       />
       <div className="flex flex-row h-[100vh] text-center items-center justify-center bg-slate-600 bg-opacity-25">
         <ul className="house-list flex flex-row text-center items-center justify-center gap-4 w-[60%] h-[600px] flex-wrap overflow-auto">
-          {housesObjs.map((house) => (
+          {savedBookMarks.map((house) => (
             <li
               className="w-[250px] h-[250px] bg-white flex flex-col text-center items-center justify-center"
               key={house.id}
@@ -43,19 +44,16 @@ const HomePage = () => {
               </div>
               <div className="h-[20%] w-[100%] bg-slate-300 flex flex-row text-center items-center justify-evenly border-b-2 border-gray-300">
                 <p className="">${house.price}</p>
-                {isHouseAlreadySaved(house.id) ? (
-                  <p className="w-[100px] h-[25px] rounded-sm bg-slate-400 hover:bg-slate-500 active:bg-slate-200">
-                    added
-                  </p>
-                ) : (
-                  <button
-                    onClick={() => addToFavos(house)}
-                    className="w-[100px] h-[30px] rounded-sm bg-slate-400 hover:bg-slate-500 active:bg-slate-200"
-                    type="button"
-                  >
-                    bookmarks
-                  </button>
-                )}
+
+                <button
+                  onClick={() => {
+                    deleteHouse(house)
+                  }}
+                  className="w-[100px] h-[30px] rounded-sm bg-slate-400 hover:bg-slate-500 active:bg-slate-200"
+                  type="button"
+                >
+                  DELETE
+                </button>
               </div>
             </li>
           ))}
@@ -65,4 +63,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default BookMarks
