@@ -40,9 +40,9 @@ const HomePage = () => {
                 </h2>
               </div>
               <div className="h-[20%] w-[100%] bg-slate-300 flex flex-row text-center items-center justify-evenly border-b-2 border-gray-300">
-                <p className="">{house.price}</p>
+                <p className="">${house.price}</p>
                 {isHouseAlreadySaved(house.id) ? (
-                  <p className="w-[100px] h-[30px] rounded-sm bg-slate-400 hover:bg-slate-500 active:bg-slate-200">
+                  <p className="w-[100px] h-[25px] rounded-sm bg-slate-400 hover:bg-slate-500 active:bg-slate-200">
                     added
                   </p>
                 ) : (
