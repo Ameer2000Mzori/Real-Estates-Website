@@ -3,12 +3,12 @@ import housesObjs from '../hooks/HomePage'
 import bgImage from '../assets/bg-img.png'
 
 // eslint-disable-next-line
-export let bookmarks
+
 const HomePage = () => {
   const [savedBookMarks, setSavedBookMarks] = useState([])
 
   useEffect(() => {
-    bookmarks = JSON.parse(localStorage.getItem('savedBookMarks')) || []
+    const bookmarks = JSON.parse(localStorage.getItem('savedBookMarks')) || []
     setSavedBookMarks(bookmarks)
   }, [])
 
