@@ -5,6 +5,8 @@ import bgImage from '../assets/bg-img.png'
 const HomePage = () => {
   // eslint-disable-next-line
 
+  const addToFavos = () => {}
+
   return (
     <>
       <img
@@ -27,6 +29,9 @@ const HomePage = () => {
               <div className="h-[20%] w-[100%] bg-slate-300 flex flex-row  text-center items-center justify-evenly border-b-2 border-gray-300">
                 <p>{house.price}</p>
                 <button
+                  onClick={() => {
+                    addToFavos(house)
+                  }}
                   className="w-[100px] h-[30px] rounded-sm bg-slate-400 hover:bg-slate-500 active:bg-slate-200"
                   type="button"
                 >
