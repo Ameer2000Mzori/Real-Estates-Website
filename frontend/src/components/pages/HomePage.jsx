@@ -1,11 +1,28 @@
 import React, { useState, useEffect } from 'react'
-import housesObjs from '../hooks/HomePage'
+// import housesObjs from '../hooks/HomePage'
 import bgImage from '../assets/bg-img.png'
 
 // eslint-disable-next-line
 
 const HomePage = () => {
   const [savedBookMarks, setSavedBookMarks] = useState([])
+  const [housesObjs, setHousesObjs] = useState([])
+  // fetching data from api
+  const getData = async () => {
+    try {
+      const res = await fetch('/houses')
+      const data = await res.json()
+      console.log(data)
+      setHousesObjs(data)
+    } catch (error) {
+      console.log(error)
+    } finally {
+      console.log('finished fetching data')
+    }
+  }
+  useEffect(() => {
+    getData()
+  }, [])
 
   useEffect(() => {
     const bookmarks = JSON.parse(localStorage.getItem('savedBookMarks')) || []
