@@ -1,13 +1,13 @@
-import express, { Router } from 'express'
+import express from 'express'
 import 'dotenv/config'
 
 const app = express()
-const Routers = express.Router()
+const router = express.Router()
 // our port :
 const PORT = process.env.PORT || 3000
 
-Routers.get('/', (req, res) => {
-  res.send('this is home page')
+router.get('/', (req, res) => {
+  res.send('this is main page')
 })
 
 app.listen(PORT, (req, res) => {
