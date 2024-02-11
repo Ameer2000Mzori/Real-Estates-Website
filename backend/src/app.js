@@ -1,12 +1,12 @@
-import express from 'express'
+import express, { Router } from 'express'
 import 'dotenv/config'
 
 const app = express()
-
+const Routers = express.Router()
 // our port :
 const PORT = process.env.PORT || 3000
 
-app.get('/', (req, res) => {
+Routers.get('/', (req, res) => {
   res.send('this is home page')
 })
 
